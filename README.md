@@ -17,10 +17,9 @@ cardano-cli conway governance vote create \
 and submit it to the chain by witnessing the drep script via the following `build-raw` command:
 
 ```bash
-utxo_value=$(cardano-cli conway query utxo --address $(cat payment.addr) --output-json | jq '.[keys[0]].value.lovelace')
-fee=600000
-govActDeposit=$(cardano-cli conway query gov-state | jq -r .currentPParams.govActionDeposit)
-change=$(($utxo_value - $fee - $govActDeposit))
+UTXO_VALUE=$(cardano-cli conway query utxo --address $(cat payment.addr) --output-json | jq '.[keys[0]].value.lovelace')
+FEE=1000000
+CHANGE=$(($UTXO_VALUE - $FEE))
 
 cardano-cli query protocol-parameters --out-file pparams.json
 
@@ -31,8 +30,8 @@ cardano-cli conway transaction build-raw \
  --vote-script-file alwaysVoteYesDrep.plutus \
  --vote-redeemer-value {} \
  --vote-execution-units "(200000000, 600000)" \
- --tx-out $(cat payment.addr)+$change \
- --fee $fee \
+ --tx-out $(cat payment.addr)+$CHANGE \
+ --fee $FEE \
  --protocol-params-file pparams.json \
  --out-file tx.raw
 
