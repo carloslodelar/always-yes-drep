@@ -11,7 +11,7 @@ cardano-cli conway governance vote create \
     --yes \
     --governance-action-tx-id "yourGovActionHashHere" \
     --governance-action-index "yourGovActionIndexHere" \
-    --drep-script-hash 9ffae7840c275594f070ee56e73caf25738dd9c24a6bcf159888c65e \
+    --drep-script-hash 1ffa2ae5f54e88a2e6a29642936aceebdd3aea948d70ace645912440 \
     --out-file myGovAction.vote
 ```
 and submit it to the chain by witnessing the drep script via the following `build-raw` command:
