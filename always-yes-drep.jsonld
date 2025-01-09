@@ -32,7 +32,7 @@
     },
     "hahsAlgorithm": "blake2b-256",
     "body": {
-        "paymentAddress": " addr_test1qp39w0fa0ccdc4gmg87puydf2kxt5mgt0vteq4a22ktrcssg7ysmx64l90xa0k4z25wpuejngya833qeu9cdxvveynfscsskf5",
+        "paymentAddress": " addr_test1qpehn20wy4073cvhra63fp9njc5hc394d3nshpf9709z9hpnmc09auuefhtpvyrq3xs4rj0syfz9vle5pm6dhefrhsaqsygt0z",
         "givenName": "Always Votes Yes",
         "image": {},
         "objectives": "Always vote yes on any action that you trigger me to vote",
